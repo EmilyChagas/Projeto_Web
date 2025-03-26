@@ -1,0 +1,75 @@
+.fundo-image {
+    position: absolute;
+    top: 48.53px;
+    left: 0px;
+    filter: blur(10px);
+    border-radius: var(--br-xl);
+    background-color: var(--cor-fundoimg);
+    width: 580px;
+    height: 355px;
+    transform: rotate(-4.8deg);
+    transform-origin: 0 0;
+}
+
+.image-icon {
+    position: absolute;
+    top: 30.72px;
+    left: 27px;
+    border-radius: var(--br-xl);
+    width: 560px;
+    height: 355px;
+    object-fit: cover;
+}
+
+.photo {
+    width: 100%; 
+    max-width: 600px; 
+    height: 419.6px; 
+    position: relative; 
+    margin-right: 40px;
+}
+
+.row { 
+    display: flex;
+    margin-top: 20px;
+    width: 746px;
+}
+
+.Text-Principal{
+    margin-left: 100px;
+}
+
+
+h1{
+    font-size: 60px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    background: linear-gradient(93.88deg, var(--cor-degrade1) 9.5%, var(--cor-degrade2) 68%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px
+}
+
+h3{
+    margin-top: 2 px;
+    font-family: 'Montserrat';
+    text-align: left;
+    display: inline-block;
+    width: 453px;
+    position: relative;
+    list-style: 32px;
+    font-size: 16px;
+    color: #fff;
+}
+
+p{
+    margin-top: 2 px;
+    font-family: 'Montserrat';
+    text-align: left;
+    display: inline-block;
+    width: 453px;
+    position: relative;
+    list-style: 32px;
+    font-size: 16px;
+    color: #fff;
+}

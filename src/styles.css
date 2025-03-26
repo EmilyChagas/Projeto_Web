@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --cor-back: #1C1C1E;
+    --cor-degrade1: #A551FF;
+    --cor-degrade2: #F49867;
+    --br-xl: 30px;
+    --cor-fundoimg: #75945c8a;
+    /* --cor-quarta: #A856FF;
+    --cor-quinta: #AE67FA; */
+}
+
+body{
+    margin: 0;
+    background: url('/Rectangle 81.png');
+    width: auto;
+    height: 2789px;
+}
+
+.navbar{
+    width: 100%;
+    position: relative;
+    background-color: var(--cor-back);
+} 
+.container-fluid {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.navbar-header {
+    flex: 1; 
+}
+
+.navbar-header h1{
+    font-weight: 700;
+}
+.navbar-brand{
+    width: 342px;
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    display: flex;
+    padding-left: 100px;
+    font-family: 'Montserrat';
+    background: linear-gradient(180deg, var(--cor-degrade1) 42.5%, var(--cor-degrade2) 68%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+}
+
+.navbar-nav {
+    display: flex; 
+    margin-left: auto; 
+    list-style: none; 
+    padding: 0;
+    padding-right: 50px; 
+}
+
+.navbar-nav img {
+    width: 24px;
+    height: 24px;
+    top: 23.24px;
+    left: 1107px;
+}
+
+.navbar-nav li{
+    margin-left: 30px;
+}
+
+.search-box {
+    position: relative;
+    display: flex; 
+    align-items: center; 
+}
+
+input[type=text] {
+    background: url('/Busca.png') no-repeat center right;
+    background-size: 25px 24px;
+    width: 30px; 
+    height: 28px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;  
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+
+input[type=text]:hover {
+    width: 400px; 
+    outline: none;
+    background-color: antiquewhite;
+    background-position: right 10px center;
+}
+
+input[type="text"]:not(:hover) {
+    width:30px;
+    outline: none;
+    border: none;
+    caret-color: transparent;
+}
