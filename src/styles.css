@@ -5,11 +5,13 @@
     --cor-degrade2: #F49867;
     --br-xl: 30px;
     --cor-fundoimg: #75945c8a;
+    --colors-purple: #af52de;
     /* --cor-quarta: #A856FF;
     --cor-quinta: #AE67FA; */
 }
 
 body{
+    font-family: 'Montserrat';
     margin: 0;
     background: url('/Rectangle 81.png');
     width: auto;
@@ -19,9 +21,9 @@ body{
 .navbar{
     width: 100%;
     position: relative;
-    background-color: var(--cor-back);
 } 
 .container-fluid {
+    background-color: var(--cor-back);
     display: flex;
     justify-content: space-between; 
     align-items: center; 

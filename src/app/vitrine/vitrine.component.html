@@ -1,17 +1,44 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-6  col-sm-12">
-            <div class="Text-Principal">
-                <h1>Seu Próximo Lar Cósmico Começa Aqui!</h1>
-                <h3>Explore um universo de possibilidades e encontre o planeta perfeito para chamar de seu. </h3>
-                <p>De gigantes gasosos a mundos rochosos, a sua aventura espacial começa agora! </p>  
-            </div>
+        <div class="Text-Principal col-md-6  col-sm-12">
+            <!-- <div class="Text-Principal"> -->
+                <h1>Bem-vindo ao <br>Sci-Fi Worlds </h1>
+                <h3>O Mercado Definitivo de Planetas Fictícios!</h3>
+                <p>De gigantes gasosos a mundos rochosos, a sua aventura espacial começa agora!</p> <br>
+                <button class="col-md-6  col-sm-12" id="compra">
+                    <a class="link-compra" href="">Compre Aqui</a>
+                </button>
+            <!-- </div> -->
         </div>
         <div class="col-md-6 d-none d-sm-block">
             <div class="photo">
                 <div class="fundo-image">
                 </div>
                 <img class="image-icon" alt="" src="image.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="row-segundario">
+        <div class="Text-Segundario col-md-4 col-sm-12">
+            <h1>O multiverso está à venda, e a próxima grande civilização pode ser sua!</h1>
+            <p> Explore agora e conquiste seu próprio mundo! </p>
+        </div>
+        <div *ngFor="let produto of produtos">        
+            <div class="card col-md-4 {{produto.id}}">
+                <div class="img-tras card-img"><img src="Rectangle 102.png" alt=""></div>
+                <div class="img card-img"><img src="{{produto.img}}" alt=""></div>
+                <div class="card-text">
+                    <p>{{produto.descricao}}</p>
+                    <h1>{{produto.nome}}</h1>
+                    <h3>{{ produto.preco | currency: 'BRL': 'symbol' : '1.2-2' }}</h3>
+                    <div class="detalhe">
+                        <a href="">
+                            <img src="+.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="sombra"></div>
             </div>
         </div>
     </div>
