@@ -4,29 +4,52 @@
     --cor-degrade1: #A551FF;
     --cor-degrade2: #F49867;
     --br-xl: 30px;
-    --cor-fundoimg: #75945c8a;
+    --cor-fundoimg: #87947c8a;
     --colors-purple: #af52de;
     /* --cor-quarta: #A856FF;
     --cor-quinta: #AE67FA; */
 }
 
-body{
+html, body{
     font-family: 'Montserrat';
     margin: 0;
-    background: url('/Rectangle 81.png');
     width: auto;
-    height: 2789px;
+    height: 2789vh;
+    padding: 0px;
 }
 
+#background-video {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto; 
+    z-index: -1; 
+    transform: translate(-50%, -50%); 
+    filter: contrast(1.2) saturate(1.5) brightness(50%);
+}
 .navbar{
     width: 100%;
     position: relative;
 } 
 .container-fluid {
-    background-color: var(--cor-back);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: fixed;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(9px);
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
     display: flex;
     justify-content: space-between; 
     align-items: center; 
+    width: 100%;
+    height: auto;
+    /* background-color: var(--cor-back); */
 }
 
 .navbar-header {
@@ -46,9 +69,10 @@ body{
     display: flex;
     padding-left: 100px;
     font-family: 'Montserrat';
-    background: linear-gradient(180deg, var(--cor-degrade1) 42.5%, var(--cor-degrade2) 68%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(180deg, var(--cor-degrade1) 42.5%, var(--cor-degrade2) 68%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
     text-align: left;
 }
 

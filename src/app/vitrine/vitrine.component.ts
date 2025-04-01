@@ -26,6 +26,18 @@ export class VitrineComponent implements OnInit {
             "Um planeta desértico icônico, famoso por seus dois sóis e seus vastos mares .  Lar de caçadores de recompensas, comerciantes, contrabandistas e da mítica  Ordem Jedi, Tatooine é o destino perfeito para quem busca aventuras perigosas ou deseja estabelecer um império no submundo galáctico. ", 
             4999000, 
             "Tatooine.png"),
+            new Produto(2, 
+              "Tatooine", 
+              "Star Wars",
+              "Um planeta desértico icônico, famoso por seus dois sóis e seus vastos mares .  Lar de caçadores de recompensas, comerciantes, contrabandistas e da mítica  Ordem Jedi, Tatooine é o destino perfeito para quem busca aventuras perigosas ou deseja estabelecer um império no submundo galáctico. ", 
+              4999000, 
+              "Tatooine.png"),
+              new Produto(3, 
+                "Tatooine", 
+                "Star Wars",
+                "Um planeta desértico icônico, famoso por seus dois sóis e seus vastos mares .  Lar de caçadores de recompensas, comerciantes, contrabandistas e da mítica  Ordem Jedi, Tatooine é o destino perfeito para quem busca aventuras perigosas ou deseja estabelecer um império no submundo galáctico. ", 
+                4999000, 
+                "Tatooine.png"),
        ];
   }
 }

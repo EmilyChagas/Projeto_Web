@@ -1,32 +1,26 @@
-<div class="container">
-    <div class="row">
-        <div class="Text-Principal col-md-6  col-sm-12">
-            <!-- <div class="Text-Principal"> -->
-                <h1>Bem-vindo ao <br>Sci-Fi Worlds </h1>
-                <h3>O Mercado Definitivo de Planetas Fictícios!</h3>
-                <p>De gigantes gasosos a mundos rochosos, a sua aventura espacial começa agora!</p> <br>
-                <button class="col-md-6  col-sm-12" id="compra">
-                    <a class="link-compra" href="">Compre Aqui</a>
-                </button>
-            <!-- </div> -->
-        </div>
-        <div class="col-md-6 d-none d-sm-block">
-            <div class="photo">
-                <div class="fundo-image">
-                </div>
-                <img class="image-icon" alt="" src="image.png">
+    < class="container">
+        <div class="row">
+            <div class="Text-Principal col-md-6  col-sm-12">
+                <!-- <div class="Text-Principal"> -->
+                    <h1>Bem-vindo ao <br>Sci-Fi Worlds </h1>
+                    <h3>O Mercado Definitivo de Planetas Fictícios!</h3>
+                    <p>De gigantes gasosos a mundos rochosos, a sua aventura espacial começa agora!</p> <br>
+                    <button class="col-md-6  col-sm-12" id="compra">
+                        <a class="link-compra" href="">Compre Aqui</a>
+                    </button>
+            </div>
+            <div class="planet">
+                    <div class="satelite"></div>
             </div>
         </div>
+    <div class="Text-Segundario col-md-12 col-sm-12">
+        <h1 class="typewriter-animation">O multiverso está à venda, e a próxima grande civilização pode ser sua!</h1>
+        <p> Explore agora e conquiste seu próprio mundo! </p>
     </div>
-
     <div class="row-segundario">
-        <div class="Text-Segundario col-md-4 col-sm-12">
-            <h1>O multiverso está à venda, e a próxima grande civilização pode ser sua!</h1>
-            <p> Explore agora e conquiste seu próprio mundo! </p>
-        </div>
         <div *ngFor="let produto of produtos">        
             <div class="card col-md-4 {{produto.id}}">
-                <div class="img-tras card-img"><img src="Rectangle 102.png" alt=""></div>
+                <div class="img-tras"></div>
                 <div class="img card-img"><img src="{{produto.img}}" alt=""></div>
                 <div class="card-text">
                     <p>{{produto.descricao}}</p>
@@ -40,6 +34,5 @@
                 </div>
                 <div class="sombra"></div>
             </div>
-        </div>
     </div>
 </div>
