@@ -1,24 +1,24 @@
-    < class="container">
-        <div class="row">
-            <div class="Text-Principal col-md-6  col-sm-12">
-                <!-- <div class="Text-Principal"> -->
-                    <h1>Bem-vindo ao <br>Sci-Fi Worlds </h1>
-                    <h3>O Mercado Definitivo de Planetas Fictícios!</h3>
-                    <p>De gigantes gasosos a mundos rochosos, a sua aventura espacial começa agora!</p> <br>
-                    <button class="col-md-6  col-sm-12" id="compra">
-                        <a class="link-compra" href="">Compre Aqui</a>
-                    </button>
-            </div>
-            <div class="planet">
-                    <div class="satelite"></div>
-            </div>
+<div class="container ">
+    <div class="row">
+        <div class="Text-Principal col-md-6  col-sm-12">
+                <h1>Bem-vindo ao <br>Sci-Fi Worlds </h1>
+                <h3>O Mercado Definitivo de Planetas Fictícios!</h3>
+                <p>De gigantes gasosos a mundos rochosos, a sua aventura espacial começa agora!</p> <br>
+                <button class="col-md-6  col-sm-12" id="compra">
+                    <a class="link-compra" href="">Compre Aqui</a>
+                </button>
         </div>
+        <div class="planet">
+            <img src="Loop Space Sticker by virartz.gif" alt="">
+                <!-- <div class="satelite"></div> -->
+        </div>
+    </div>
     <div class="Text-Segundario col-md-12 col-sm-12">
-        <h1 class="typewriter-animation">O multiverso está à venda, e a próxima grande civilização pode ser sua!</h1>
+        <h1 class="typewriter-animation" id="typewrite">O multiverso está à venda, e a próxima grande civilização pode ser sua!</h1>
         <p> Explore agora e conquiste seu próprio mundo! </p>
     </div>
-    <div class="row-segundario">
-        <div *ngFor="let produto of produtos">        
+    <div class="row-segundario col-xl-6 col-lg-6 col-md-12 col-12">
+        <div *ngFor="let produto of produtos"> 
             <div class="card col-md-4 {{produto.id}}">
                 <div class="img-tras"></div>
                 <div class="img card-img"><img src="{{produto.img}}" alt=""></div>
@@ -35,4 +35,31 @@
                 <div class="sombra"></div>
             </div>
     </div>
+    </div>
+    <div class="row-terceiro">
+        <div class="img-cortada col-md-4 d-sm-block">
+            <img src="death-star.png" alt="" class="figure-img">
+        </div>
+        <div class="Text-Terceiro  text-md-center  col-sm-9">
+            <h1>Você já sonhou em possuir <b id="Cybertron">Cybertron</b>, explorar <b id="Duna">Arrakis </b>ou governar a <b id="DeathStar">Estrela da Morte</b>?</h1>
+            <p>No <b>Sci-Fi Worlds</b>, tornamos isso possível! Aqui, você pode comprar, colecionar e até 
+                revender os planetas mais icônicos das maiores obras de ficção científica. </p>
+            <a href="">comece sua compra</a>
+        </div>
+    </div>
+    <footer class="card-footer">
+        <h1>Sci-Fi Worlds</h1>
+        <div class="nav-footer">
+            <ul class="navbar-text">
+                <li> <a href="">home</a></li>
+                <li><a href="">produto</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+            <ul class="navbar-contact">
+                <li><p>Made by</p></li>
+                <li><a href="https://github.com/Isabel2507">Isabel Santos</a></li>
+                <li><a href="https://github.com/EmilyChagas">Emily Chagas</a></li>
+            </ul>
+        </div>
+    </footer>
 </div>
