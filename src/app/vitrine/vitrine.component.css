@@ -237,24 +237,32 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 100px;
     width: auto;
-    height: 800px;
+    height: 500px;
     margin-bottom: 300px;
     /* flex-direction: column;
     align-content: space-between; */
 }
 
+.Product-Vitrine{
+    margin-top:150px;
+    height: auto;
+    display: flex;
+}
+
 .planet{
     display: flex;
     position: relative; 
-    align-items: flex-end;
-    margin-right: 40px;
+    justify-content: center;
+    width: 100%;
+    height: auto;
 }
 
 .planet img{
     display: flex;
     justify-content: flex-end;
+    height: 100%;
 }
 
 .row-terceiro{
@@ -264,7 +272,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin-bottom: 300px;
+    margin-bottom: 400px;
 }
 
 .img-cortada{
@@ -399,7 +407,6 @@
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
-
 }
 
 
