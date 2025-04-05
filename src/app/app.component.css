@@ -108,3 +108,11 @@ input[type="text"]:not(:hover) {
     border: none;
     caret-color: transparent;
 }
+
+button{
+    margin:0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}

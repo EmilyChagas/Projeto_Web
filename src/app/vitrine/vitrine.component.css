@@ -127,7 +127,7 @@
 
 @keyframes typewriter {
     from{width: 0%;}
-    to{width: 85%;}
+    to{width: 72%;}
 }
 @keyframes blinkingCursor{
   from { border-right-color: rgba(255,255,255,.75); }
@@ -241,8 +241,6 @@
     width: auto;
     height: 500px;
     margin-bottom: 300px;
-    /* flex-direction: column;
-    align-content: space-between; */
 }
 
 .Product-Vitrine{
