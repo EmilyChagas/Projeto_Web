@@ -1,36 +1,4 @@
 
-
-/* .fundo-image {
-    position: absolute;
-    top: 48.53px;
-    left: 0px;
-    filter: blur(20px);
-    border-radius: var(--br-xl);
-    background-color: var(--cor-fundoimg);
-    width: 580px;
-    height: 355px;
-    transform: rotate(-4.8deg);
-    transform-origin: 0 0;
-}
-
-.image-icon {
-    position: absolute;
-    top: 30.72px;
-    left: 27px;
-    border-radius: var(--br-xl);
-    width: 560px;
-    height: 355px;
-    object-fit: cover;
-}
-
-.photo {
-    width: 100%; 
-    max-width: 600px; 
-    height: 419.6px; 
-    position: relative; 
-    margin-right: 40px;
-} */
-
 .row { 
     display: flex;
     margin-top: 100px;
@@ -47,20 +15,21 @@
         font-size: 60px;
         font-weight: 700;
         background: linear-gradient(93.88deg, var(--cor-degrade1) 9.5%, var(--cor-degrade2) 68%);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 0px;
 }
     
 .Text-Principal h3{
-        margin-top: 2px;
-        text-align: left;
-        display: inline-block;
-        width: 453px;
-        position: relative;
-        list-style: 32px;
-        font-size: 26px;
-        color: #fff;
+    margin-top: 2px;
+    text-align: left;
+    display: inline-block;
+    width: 453px;
+    position: relative;
+    list-style: 32px;
+    font-size: 26px;
+    color: #fff;
 }
     
 .Text-Principal p{
@@ -162,7 +131,6 @@
     border-radius: 20px;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(10px);
-    /* background: linear-gradient(145deg, #e6e6e6, #ffffff); */
     box-shadow:  16px 16px 30px #1f1e1ea2,
     -8px -8px 30px #ec79ec75;
 
@@ -211,6 +179,12 @@
     margin-top: auto; 
     align-self: flex-end; 
 }
+
+.detalhe img{
+    width: 30px;
+    height: 30px;
+}
+
 .img {
     position: absolute; 
     display: flex; 

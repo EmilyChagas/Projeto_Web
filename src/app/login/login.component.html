@@ -1,0 +1,58 @@
+<div class="container" #container>
+    <div class="form-container register-container">
+      <form action="#">
+        <h1>Cadastre-se aqui.</h1>
+        <input type="text" placeholder="Nome">
+        <input type="email" placeholder="Email">
+        <input type="number" placeholder="Telefone">
+        <input type="Password" placeholder="Senha">
+        <button>Cadastrar</button>
+        <span>ou use a sua conta</span>
+        <div class="social-container">
+          <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
+          <a href="#" class="social"><i class="lni lni-google"></i></a>
+          <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
+
+        </div>
+      </form>
+    </div>
+
+    <div class="form-container login-container">
+      <form action="#">
+        <h1>Faça o seu login.</h1>
+        <input type="email" placeholder="Email">
+        <input type="Password" placeholder="Senha">
+        <div class="content">
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label>Lembrar de mim</label>
+          </div>
+          <div class="pass-link">
+            <a href="#">Esqueceu a senha?</a>
+          </div>
+        </div>
+        <button>Login</button>
+        <div class="social-container">
+          <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
+          <a href="#" class="social"><i class="lni lni-google"></i></a>
+          <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1 class="title">Bem-vindo <br> cliente.</h1>
+          <p>Caso você tenha uma conta, faça login aqui e aproveite o nosso catálogo.</p>
+          <button class="ghost" (click)="onLoginClick()" >Login</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1 class="title">Comece a sua <br> jornada agora.</h1>
+          <p>Caso você não tenha uma conta ainda, junte-se a nós e comece a sua jornada intergaláctica.</p>
+          <button class="ghost" (click)="onRegisterClick()">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
