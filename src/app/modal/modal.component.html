@@ -1,11 +1,10 @@
 <div class="modal">
-
         <div class="produto" *ngFor="let produto of produtos">
             <div class="produto-img"><img src="{{produto.img}}" alt=""></div>
             <div class="produto-text">
                 <h1 class="produto-nome">{{produto.nome}}</h1>
                 <h2 class="produto-des">{{produto.descricao}}</h2>
-                <h3 class="produto-preco">{{ produto.preco | currency: 'BRL': 'symbol' : '1.2-2' }}</h3>   
+                <h3 class="produto-preco">{{ produto.preco * produto.quant | currency: 'BRL': 'symbol' : '1.2-2' }}</h3>   
             </div>
             <div class="produto-elements">
                     <button class="produto-menos" (click)="diminuir(produto)"><img src="menos.png" alt=""></button>
@@ -14,5 +13,32 @@
                     <button class="produto-remove" ><img src="lixo.png" alt=""></button>
             </div>
         </div>
-
+        <div class="pedido">
+            <h1>Resumo</h1>
+            <div class="pedido-resumo">
+                <div class="pedido-valor"> 
+                    <h1>Subtotal</h1>
+                    <h2>{{ totalPedido | currency: 'BRL': 'symbol' : '1.2-2' }}</h2> 
+                </div>
+                <div class="pedido-frete">
+                    <h1>Frente</h1>
+                    <h2>{{ frete | currency: 'BRL': 'symbol' : '1.2-2' }}</h2> 
+                </div>
+            </div>
+            <div id="linha"></div>
+            <div  class="pedido-total">
+                <h1>Total</h1>
+                <h2>{{totalComFrete | currency: 'BRL': 'symbol' : '1.2-2'}}</h2> 
+            </div>
+        </div>
+        <div class="comprar">
+            <button class="comprar-confirma">
+                <a href="">Fazer pedido</a>
+                <!-- <img src="avançar.png" alt=""> -->
+            </button>
+            <button class="comprar-mais">
+                <!-- <img src="retornar.png" alt=""> -->
+                <a href="">Adicionar mais</a>
+            </button>
+        </div>
 </div>

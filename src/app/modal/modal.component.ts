@@ -9,6 +9,7 @@ import { Produto } from '../model/produto';
 })
 export class ModalComponent {
     produtos: Produto[] = [];
+    valorFrete: number = 2000;
   
     constructor() { }
   
@@ -44,7 +45,11 @@ export class ModalComponent {
                   "Krypton.png",1),
          ]; 
     }   
-
+    get totalPedido(): number {
+      return this.produtos.reduce((total, produto) => {
+        return total + produto.preco * produto.quant;
+      }, 0);
+    }
       aumentar(produt: Produto) {
         produt.quant++; 
       }
@@ -52,5 +57,13 @@ export class ModalComponent {
         if (produt.quant > 0) { 
             produt.quant--;
         }
+    }
+
+    get frete(): number{
+      return this.valorFrete;
+    }
+
+    get totalComFrete(): number {
+      return this.totalPedido + this.valorFrete;
     }
 }
