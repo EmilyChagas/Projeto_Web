@@ -1,8 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button'
 import {MatDialog} from '@angular/material/dialog'
 import { ModalComponent } from './modal/modal.component';
+import { DetalheComponent } from './detalhe/detalhe.component';
 
 @Component({
   selector: 'app-root',
@@ -22,5 +23,4 @@ export class AppComponent {
   OpenCarrinho():void{
     this.carrinho.open(ModalComponent);
   }
-
 }

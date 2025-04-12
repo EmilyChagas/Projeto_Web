@@ -2,11 +2,12 @@
     <div class="form-container register-container">
       <form action="#">
         <h1>Cadastre-se aqui.</h1>
-        <input type="text" placeholder="Nome">
-        <input type="email" placeholder="Email">
-        <input type="number" placeholder="Telefone">
-        <input type="Password" placeholder="Senha">
-        <button>Cadastrar</button>
+        <div class="alert alert-success" *ngIf="mensagem.length>0">{{mensagem}}</div>
+        <input class="form-control"type="text" placeholder="Nome" [(ngModel)]="obj.nome" [ngModelOptions]="{standalone: true}" required pattern="[A-z\s]{6,100}">
+        <input class="form-control" type="email" placeholder="Email"[(ngModel)]="obj.email" [ngModelOptions]="{standalone: true}"required>
+        <input class="form-control"type="text" placeholder="Telefone"[(ngModel)]="obj.telefone" [ngModelOptions]="{standalone: true}" pattern="[0-9]{4,5}-[0-9]{4}">
+        <input class="form-control" type="Password" placeholder="Senha"[(ngModel)]="obj.senha" [ngModelOptions]="{standalone: true}" required pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/">
+        <button (click)="gravar()">Cadastrar</button>
         <span>ou use a sua conta</span>
         <div class="social-container">
           <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
@@ -18,10 +19,11 @@
     </div>
 
     <div class="form-container login-container">
-      <form action="#">
+      <form action="#" class="login">
         <h1>Faça o seu login.</h1>
-        <input type="email" placeholder="Email">
-        <input type="Password" placeholder="Senha">
+        <div class="alert alert-danger" *ngIf="mensagem.length>0">{{mensagem}}</div>
+        <input type="email" placeholder="Email" [(ngModel)]="obj.email" class="form-control" [ngModelOptions]="{standalone: true}" required>
+        <input type="Password" placeholder="senha"  [(ngModel)]="obj.senha" [ngModelOptions]="{standalone: true}" required>
         <div class="content">
           <div class="checkbox">
             <input type="checkbox" name="checkbox" id="checkbox">
@@ -31,7 +33,7 @@
             <a href="#">Esqueceu a senha?</a>
           </div>
         </div>
-        <button>Login</button>
+        <button (click)="fazerLogin()">Login</button>
         <div class="social-container">
           <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
           <a href="#" class="social"><i class="lni lni-google"></i></a>

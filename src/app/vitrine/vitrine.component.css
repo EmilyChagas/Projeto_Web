@@ -448,3 +448,9 @@ font-size: 90px;
     color: #807e7e;
     margin-right: 10px;
 }
+
+button{
+    cursor: pointer;
+    background: none;
+    border: none;
+}
