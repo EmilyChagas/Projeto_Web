@@ -27,7 +27,7 @@
                     <h1>{{produto.nome}}</h1>
                     <h3>{{ produto.preco | currency: 'BRL': 'symbol' : '1.2-2' }}</h3>
                     <div class="detalhe">
-                            <button (click)='OpenDetalhe(detalhado)'>
+                            <button (click)='carregar(produto)'>
                                 <img src="+.png" alt="">
                             </button>
                     </div>

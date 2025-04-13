@@ -40,6 +40,9 @@ export class LoginComponent {
           }, 1000);
       } else {
           this.mensagem = "Email ou senha invalidos verifique!";
+          setTimeout(() => {
+            this.mensagem = "";
+          }, 2000);
       }
     }
   }

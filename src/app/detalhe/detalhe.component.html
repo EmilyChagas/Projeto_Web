@@ -1,16 +1,23 @@
 
-<div class="detalhe">
+<div class="detalhe" *ngIf="detalhe">
     <div class="detalhe-produto">
         <div class="detalhe-img" >
             <img src="" alt="">
         </div>
         <div class="detalhe-texto">
-            <h1></h1>
-            <p></p>
-            <button></button>
+            <h1>{{detalhe.nome}}</h1>
+            <p>{{detalhe.descricao}}</p>
+            <button>Comprar</button>
         </div>
     </div>
     <div class="detalhe-info">
-
+        <button>Caracteristica</button>
+        <h2>{{detalhe.des_detalhada}}</h2>
+        <p>{{detalhe.info1}}</p>
+        <p>{{detalhe.info2}}</p>
+        <p>{{detalhe.info3}}</p>
+        <p>{{detalhe.info4}}</p>
+        <h3>{{detalhe.alerta}}</h3>
+        <h4>{{detalhe.final}}</h4>
     </div>
 </div>
