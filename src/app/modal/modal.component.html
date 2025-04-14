@@ -1,16 +1,17 @@
 <div class="modal">
-        <div class="produto" *ngFor="let produto of produtos">
+        <div class="produto" *ngFor="let produto of produto.itens">
             <div class="produto-img"><img src="{{produto.img}}" alt=""></div>
             <div class="produto-text">
                 <h1 class="produto-nome">{{produto.nome}}</h1>
                 <h2 class="produto-des">{{produto.descricao}}</h2>
+                <h4>Estoque: {{produto.estoque}}</h4>
                 <h3 class="produto-preco">{{ produto.preco * produto.quant | currency: 'BRL': 'symbol' : '1.2-2' }}</h3>   
             </div>
             <div class="produto-elements">
                     <button class="produto-menos" (click)="diminuir(produto)"><img src="menos.png" alt=""></button>
                     <input  type="number" [value]="produto.quant" pattern="[0-9]*">
                     <button class="produto-mais" (click)="aumentar(produto)"><img src="mais.png" alt=""></button>
-                    <button class="produto-remove" ><img src="lixo.png" alt=""></button>
+                    <button class="produto-remove" (click)="limparCesta(produto)"><img src="lixo.png" alt=""></button>
             </div>
         </div>
         <div class="pedido">

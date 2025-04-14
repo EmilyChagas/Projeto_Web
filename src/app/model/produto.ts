@@ -6,4 +6,5 @@ export class Produto{
     public preco: number= 0;
     public img: string= "";
     public quant: number= 0;
+    public estoque: number = 0;
 }

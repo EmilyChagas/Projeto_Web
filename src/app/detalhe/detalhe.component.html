@@ -2,22 +2,28 @@
 <div class="detalhe" *ngIf="detalhe">
     <div class="detalhe-produto">
         <div class="detalhe-img" >
-            <img src="" alt="">
+            <img src="{{detalhe.img}}" alt="">
         </div>
         <div class="detalhe-texto">
             <h1>{{detalhe.nome}}</h1>
             <p>{{detalhe.descricao}}</p>
-            <button>Comprar</button>
+            <h3>Estoque: {{detalhe.estoque}}</h3>
+            <h2>{{detalhe.preco | currency: 'BRL': 'symbol' : '1.2-2'}}</h2>
+            <h3>ou até 24x de {{detalhe.preco / 24 | currency: 'BRL': 'symbol' : '1.2-2'}} sem juros</h3>
+            <button (click)="comprar(detalhe)">Comprar</button>
         </div>
     </div>
     <div class="detalhe-info">
-        <button>Caracteristica</button>
+        <button (click)="toggleTexto()" >  {{ mostrarTexto ? 'Características' : 'Características'}} </button>
+        <div *ngIf="mostrarTexto" class="texto-oculto">
         <h2>{{detalhe.des_detalhada}}</h2>
         <p>{{detalhe.info1}}</p>
         <p>{{detalhe.info2}}</p>
         <p>{{detalhe.info3}}</p>
         <p>{{detalhe.info4}}</p>
-        <h3>{{detalhe.alerta}}</h3>
-        <h4>{{detalhe.final}}</h4>
+        <h3><img src="icons8-atenção-48.png" alt="">{{detalhe.alerta}}</h3>
+        <h4><img src="icons8-mega-vendas-48.png" alt="">{{detalhe.final}}</h4>  
+        </div>
+
     </div>
 </div>

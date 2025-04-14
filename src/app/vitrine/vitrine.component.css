@@ -96,7 +96,7 @@
 
 @keyframes typewriter {
     from{width: 0%;}
-    to{width: 72%;}
+    to{width: 85%;}
 }
 @keyframes blinkingCursor{
   from { border-right-color: rgba(255,255,255,.75); }
