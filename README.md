@@ -13,6 +13,7 @@ O projeto foi desenvolvido em dupla, por **Emily Chagas** e **Isabel Santos**.
 - HTML5
 - CSS3
 - TypeScript
+- Bootstrap
 
 ## 🎯 Funcionalidades
 
