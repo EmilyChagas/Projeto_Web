@@ -50,15 +50,6 @@ export class VitrineComponent {
 
   readonly detalhe = inject(MatDialog);
 
-  // OpenDetalhe(detalhado: any):void{
-  //   this.detalhe.open(DetalheComponent, {
-  //     data: detalhado
-  //   });
-  // }
-  // public carregar(obj: Produto){
-  //   localStorage.setItem("produto", JSON.stringify(obj));
-  //   this.detalhe.open(DetalheComponent, {data:obj});
-  // }
 
 public carregar(obj: Produto) {
   this.detalhe.open(DetalheComponent, {

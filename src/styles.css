@@ -6,8 +6,10 @@
     --br-xl: 30px;
     --cor-fundoimg: #87947c8a;
     --colors-purple: #af52de;
-    /* --cor-quarta: #A856FF;
-    --cor-quinta: #AE67FA; */
+    --white-light: rgba(255, 255, 255, 0.5);
+    --alice-blue: #f8f9fa;
+    --carribean-green: purple;
+    --gray: #ededed;
 }
 
 html, body{

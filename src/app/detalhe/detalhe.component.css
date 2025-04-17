@@ -117,15 +117,6 @@
     margin-bottom: 10px;
 }
 
-.texto-oculto h2:hover{
-    background: url('/space-title.gif');
-    background-size: cover;
-    color: transparent;
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-}
-
 .texto-oculto p{
     font-size: 12px;
     font-style:normal;

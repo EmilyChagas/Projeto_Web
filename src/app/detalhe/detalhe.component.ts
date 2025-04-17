@@ -52,6 +52,38 @@ export class DetalheComponent {
         this.detalhe.alerta = "A estabilidade geológica ainda é incerta. Seguro contra explosões planetárias altamente recomendado. ";
         this.detalhe.final  = "Adquira agora e traga Krypton de volta à glória!  "
       }
+      else if(this.detalhe.id==5){
+        this.detalhe.info1 = "Um mundo repleto de magia, deuses temperamentais e leis físicas questionáveis. ";
+        this.detalhe.info2 = "Cidades icônicas como Ankh-Morpork, onde política e crime são praticamente a mesma coisa. ";
+        this.detalhe.info3 = "A presença recorrente da própria Morte (ele é gente boa, só um pouco soturno). ";
+        this.detalhe.info4 = "Possibilidade de encontros com bruxas, trolls, vampiros, bibliotecários orangotangos e viajantes imprudentes.";
+        this.detalhe.alerta = "Efeitos colaterais da magia podem incluir mudanças na realidade e visitas inesperadas de Rincewind. ";
+        this.detalhe.final  = " Compre agora e torne-se parte da maior sátira do multiverso!"
+      }
+      else if(this.detalhe.id==6){
+        this.detalhe.info1 = "Lar dos Guardiões do Universo, seres imortais de vasto conhecimento.";
+        this.detalhe.info2 = "A fonte da Bateria Central, que alimenta os anéis dos Lanternas Verdes. ";
+        this.detalhe.info3 = "Arquitetura cósmica impressionante, com vastas torres e tecnologia avançada.";
+        this.detalhe.info4 = "Ponto estratégico com acesso a todos os setores do universo. ";
+        this.detalhe.alerta = "Presença de Lanternas Verdes pode dificultar tentativas de domínio absoluto. ";
+        this.detalhe.final  = "Garanta agora sua posição no centro do universo e molde o destino cósmico!  "
+      }
+      else if(this.detalhe.id==7){
+        this.detalhe.info1 = "Ambiente montanhoso e vastas paisagens, com um céu que muda constantemente devido ao controle temporal.";
+        this.detalhe.info2 = "Lar dos Senhores do Tempo, seres imortais que governam o fluxo do tempo e viajam por diferentes épocas. ";
+        this.detalhe.info3 = "A presença de TARDIS, as naves espaciais que podem viajar através do tempo e do espaço. ";
+        this.detalhe.info4 = "Cultura altamente avançada em manipulação temporal, viagem interdimensional e tecnologias que desafiam as leis da física.";
+        this.detalhe.alerta = "A aquisição pode atrair a atenção do Senhor Supremo ou de outros Senhores do Tempo. Prepare-se para desafios inesperados.";
+        this.detalhe.final  = " Compre agora e controle o próprio fluxo do tempo! "
+      }
+      else if(this.detalhe.id==8){
+        this.detalhe.info1 = "Terreno montanhoso e vulcânico, com vastas erupções e paisagens dramáticas. ";
+        this.detalhe.info2 = "Lar do renomado Surak, filósofo que estabeleceu o código de lógica Vulcana.";
+        this.detalhe.info3 = "Sociedade focada em autossuperação e controle emocional, com grande ênfase na meditação e no estudo.";
+        this.detalhe.info4 = "Uma cultura que valoriza o conhecimento profundo das ciências e da tecnologia. ";
+        this.detalhe.alerta = "Visitas emocionais podem ser desencorajadas. Prepare-se para a maior demonstração de disciplina de sua vida.";
+        this.detalhe.final  = " Adquira agora e adentre o mundo onde a razão é a única lei! "
+      }
     }
   }
 

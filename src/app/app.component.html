@@ -1,14 +1,17 @@
-<video autoplay muted loop id="background-video">
-  <source src="Galaxy_Purple.mp4" type="video/mp4">
-</video>
-<nav class="navbar navbar-expand-lg" role="navigation">
+
+<nav class="navbar" role="navigation">
   <div class="container-fluid">  
     <div class="navbar-header">
-      <h1 class="navbar-brand" href="#">Sci-Fi Worlds</h1>
+      <h1 class="navbar-brand">Sci-Fi Worlds</h1>
+      <button class="menu-toggle" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right" [class.active]="isMenuOpen">
       <li class="search-box">
-        <input type="text" class="search" name="search" placeholder="">
+        <input type="text" class="search" name="search"   placeholder="" [(ngModel)]="searchTerm"  [ngModelOptions]="{standalone: true}" (keydown.enter)="search()">
       </li>
       <li>
         <a href="" class="image-container">
@@ -16,7 +19,9 @@
         </a>
       </li>
       <li>
-          <button  class="image-container" (click)="OpenCarrinho()"><img src="Cesta.png" alt="Cesta"></button>
+        <button class="image-container" (click)="OpenCarrinho()">
+          <img src="Cesta.png" alt="Cesta">
+        </button>
       </li>
       <li>
         <a href="Login" class="image-container">
@@ -27,4 +32,24 @@
   </div>
 </nav>
 
-<router-outlet />
+<video autoplay muted loop id="background-video">
+  <source src="Galaxy_Purple.mp4" type="video/mp4">
+</video>
+
+<router-outlet /> 
+
+<footer class="card-footer">
+  <h1>Sci-Fi Worlds</h1>
+  <div class="nav-footer">
+      <ul class="navbar-text">
+          <li> <a href="#home">home</a></li>
+          <li><a href="Produtos">produto</a></li>
+          <li><a href="https://github.com/EmilyChagas/Projeto_Web" target="_blank">Contact Us</a></li>
+      </ul>
+      <ul class="navbar-contact">
+          <li><p>Made by</p></li>
+          <li><a href="https://github.com/Isabel2507" target="_blank">Isabel Santos</a></li>
+          <li><a href="https://github.com/EmilyChagas" target="_blank">Emily Chagas</a></li>
+      </ul>
+  </div>
+</footer>
