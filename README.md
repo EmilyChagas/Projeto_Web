@@ -1,9 +1,9 @@
 # Sci-Words
-Projeto desenvolvido para a disciplina de **Programação de Web**, com o objetivo de praticar os conhecimentos adquiridos sobre **Angular**, **HTML**, **CSS** e **TypeScript**.
+Projeto desenvolvido para a disciplina de **Programação de Web**, com o objetivo de praticar os conhecimentos adquiridos sobre **Angular**, **HTML**, **CSS**, **TypeScript** e **Bootstrap**.
 
 ## 🚀 Sobre o Projeto
 
-Este é um site fictício de vendas que oferece **planetas icônicos de filmes e séries**, como **Tatooine** (Star Wars) e **Oa** (Lanterna Verde). A ideia foi criar uma aplicação divertida, que unisse criatividade com a prática das tecnologias aprendidas em aula.
+Este é um site fictício de vendas que oferece **planetas icônicos de filmes e séries**. A ideia foi criar uma aplicação divertida, que unisse criatividade com a prática das tecnologias aprendidas em aula.
 
 O projeto foi desenvolvido em dupla, por **Emily Chagas** e **Isabel Santos**.
 
@@ -51,12 +51,12 @@ Durante o desenvolvimento deste projeto, aprofundamos nossos conhecimentos em:
 
 ## 👩‍💻 Desenvolvedoras
 
-- [Seu Nome Aqui]
-- Isabel
+- [Emily Chagas](https://github.com/EmilyChagas)
+- [Isabel Santos](https://github.com/Isabel2507)
 
 ## 📚 Disciplina
 
-Projeto da disciplina **Programação de Web**, ministrada no curso de [Seu Curso Aqui] na [Sua Universidade ou Instituição].
+Projeto da disciplina **Programação de Web**, ministrada no curso de Análise e Desenvolvimento de Sistema na Fatec Ipiranga.
 
 ---
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
