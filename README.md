@@ -1,4 +1,4 @@
-# Sci-Words
+# Sci-Fi Worlds
 Projeto desenvolvido para a disciplina de **Programação de Web**, com o objetivo de praticar os conhecimentos adquiridos sobre **Angular**, **HTML**, **CSS**, **TypeScript** e **Bootstrap**.
 
 ## 🚀 Sobre o Projeto
