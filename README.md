@@ -19,6 +19,7 @@ O projeto foi desenvolvido em dupla, por **Emily Chagas** e **Isabel Santos**.
 - 🪐 Busca de planetas fictícios
 - 🔍 Visualização de detalhes de cada planeta
 - 🛒 Simulação de compra
+- 🔐 Cadastro e Login de cliente
 - 📱 Layout responsivo
 
 ## 📷 Capturas de Tela
