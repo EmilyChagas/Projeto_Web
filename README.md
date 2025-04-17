@@ -23,20 +23,20 @@ O projeto foi desenvolvido em dupla, por **Emily Chagas** e **Isabel Santos**.
 
 ## 📷 Capturas de Tela
 ### 🏠 Home
-![Home](/assets/Home.png)
-![Home Parte 2](/assets/Home pt2.png)
+<img src="/assets/Home.png" alt="">
+<img src="/assets/Home pt2.png" alt="">
 
 ### 🔐 Login
-![Login](/assets/login.png)
+<img src="/assets/login.png" alt="">
 
 ### 🖼️ Galeria
-![Galeria](/assets/galeria.png)
+<img src="/assets/galeria.png" alt="">
 
 ### 🔍 Detalhe do Produto
-![Detalhe do Produto](/assets/detalhe.png)
+<img src="/assets/detalhe.png" alt="">
 
 ### 🛒 Cesta
-![Cesta](/assets/cesta.png)
+<img src="/assets/cesta.png" alt="">
 
 ## 💡 Aprendizados
 
