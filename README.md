@@ -22,20 +22,20 @@ O projeto foi desenvolvido em dupla, por **Emily Chagas** e **Isabel Santos**.
 - 📱 Layout responsivo
 
 ## 📷 Capturas de Tela
-<h1>Home</h1>
+###Home
 <img src="/assets/Home.png" alt="">
 <img src="/assets/Home pt2.png" alt="">
 <br>
-<h1>Login</h1>
+###Login
 <img src="/assets/login.png" alt="">
 <br>
-<h1>Galeria</h1>
+###Galeria
 <img src="/assets/galeria.png" alt="">
 <br>
-<h1>Detalhe do Produto</h1>
+###Detalhe do Produto
 <img src="/assets/detalhe.png" alt="">
 <br>
-<h1>Cesta</h1>
+###Cesta
 <img src="/assets/cesta.png" alt="">
 
 ## 💡 Aprendizados
