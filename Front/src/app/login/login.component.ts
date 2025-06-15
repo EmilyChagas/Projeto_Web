@@ -1,8 +1,10 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, PLATFORM_ID, Inject } from '@angular/core';
 import { Cliente } from '../model/cliente';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ClienteService } from '../service/cliente.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,17 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  constructor(private router: Router) {}
+  public constructor(private router: Router,private service: ClienteService, @Inject(PLATFORM_ID) private platformId: Object){
+    if (isPlatformBrowser(this.platformId)) {
+      const token = localStorage.getItem('authToken');
+      let json = localStorage.getItem("cliente");
+      if(json==null){
+        this.mensagem = "Você ainda não tem cadastro!!!";
+      } else {
+        this.obj = JSON.parse(json);
+      } 
+    }
+}
   @ViewChild('container') container!: ElementRef<HTMLDivElement>;
 
   onLoginClick(): void {
@@ -26,35 +38,69 @@ export class LoginComponent {
   public mensagem : String = "";
   public obj: Cliente = new Cliente();
 
-  public fazerLogin(){
-    let json = localStorage.getItem("cliente");
-    if(json==null){
-      this.mensagem = "Cadastro do cliente não existe!";
-    } else {
-      let objAux = JSON.parse(json);
-      if(objAux.email == this.obj.email && 
-        objAux.senha== this.obj.senha){
-          this.mensagem = "Bem vindo, "+ objAux.nome;
-          setTimeout(() => {
-            this.router.navigate(['']); 
-          }, 1000);
-      } else {
-          this.mensagem = "Email ou senha invalidos verifique!";
-          setTimeout(() => {
-            this.mensagem = "";
-          }, 2000);
-      }
-    }
+    public fazerLogin(){
+    this.service.fazerLogin(this.obj).subscribe({
+       next:(data)=>{
+        if(data.codigo==0){
+          this.mensagem = "Email ou senha invalidos!!!";
+        } else {
+          localStorage.setItem("cliente", JSON.stringify(data));
+          this.mensagem = "Bem vindo!";
+            setTimeout(() => {
+              this.router.navigate(['Perfil']); 
+            }, 1000);
+          }
+        },
+        error:(error)=>{
+          this.mensagem = "Ocorreu um erro, tente mais tarde!";
+        } 
+    });
   }
 
   public gravar(){
-    console.log(this.obj);
-    localStorage.setItem("cliente", JSON.stringify(this.obj));
-    this.mensagem = "Cliente atualizado com sucesso!";
-    setTimeout(() => {
-      this.container.nativeElement.classList.remove("right-panel-active");
-      this.mensagem = "Faça seu login!";
-    }, 1000);
+    this.service.gravar(this.obj).subscribe({
+       next:(data)=>{
+          this.mensagem = "Cliente cadastrado com sucesso!";
+              setTimeout(() => {
+              this.container.nativeElement.classList.remove("right-panel-active");
+              this.mensagem = "Faça seu login!";
+            }, 1000);
+        },
+        error:(error)=>{
+          this.mensagem = "Ocorreu um erro, tente mais tarde!";
+        } 
+    });
   }
+
+
+  public alterar(){
+   this.service.alterar(this.obj).subscribe({
+       next:(data)=>{
+          this.mensagem = "Cliente atualizado com sucesso!";
+        },
+        error:(error)=>{
+          this.mensagem = "Ocorreu um erro, tente mais tarde!";
+        } 
+    });
+ }
+
+ public limpar(){
+  this.obj.codigo = 0;
+  this.obj.nome = "";
+  this.obj.email = "";
+  this.obj.telefone = "";
+ }
+
+ public remover(){
+    this.service.apagar(this.obj).subscribe({
+       next:(data)=>{
+          this.limpar();
+          this.mensagem = "Cliente removido com sucesso!";
+        },
+        error:(error)=>{
+          this.mensagem = "Ocorreu um erro, tente mais tarde!";
+        } 
+    });
+}
 }
 

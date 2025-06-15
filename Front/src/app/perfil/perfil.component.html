@@ -1,0 +1,20 @@
+<div class="container" #container >
+    <div class="form-container perfil-container">
+      <form action="#">
+        <h1 *ngIf="obj.nome">Olá, {{obj.nome}}!</h1>
+        <div class="alert alert-success" *ngIf="mensagem.length>0">{{mensagem}}</div>
+        <input class="form-control"type="text" placeholder="Nome" [(ngModel)]="obj.nome" [ngModelOptions]="{standalone: true}" required pattern="[A-z\s]{6,100}">
+        <input class="form-control" type="email" placeholder="Email"[(ngModel)]="obj.email" [ngModelOptions]="{standalone: true}"required>
+        <input class="form-control"type="text" placeholder="Telefone"[(ngModel)]="obj.telefone" [ngModelOptions]="{standalone: true}" pattern="[0-9]{4,5}-[0-9]{4}">
+        <input class="form-control" type="Password" placeholder="Senha"[(ngModel)]="obj.senha" [ngModelOptions]="{standalone: true}" required pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/">
+        <button (click)="alterar()">Alterar</button>
+        <button (click)="fazerLogout()">Sair da Conta</button>
+        <button (click)="remover()">Excluir Conta</button>
+        <span>Conecte seu perfil a outras contas</span>
+        <div class="social-container">
+          <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
+          <a href="#" class="social"><i class="lni lni-google"></i></a>
+          <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
+        </div>
+      </form>
+    </div>
