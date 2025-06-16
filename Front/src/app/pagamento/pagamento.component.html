@@ -1,0 +1,70 @@
+<div class="pagamento-container">
+  <div *ngIf="!pedidoProcessado">
+    <h2>Finalizar Compra</h2>
+    
+    <form (ngSubmit)="processarPagamento()">
+      <div class="form-group">
+        <label>Número do Cartão</label>
+        <input type="text" [(ngModel)]="dadosCartao.numero" name="numero" placeholder="1234 5678 9012 3456">
+      </div>
+      
+      <div class="form-group">
+        <label>Nome no Cartão</label>
+        <input type="text" [(ngModel)]="dadosCartao.nome" name="nome" placeholder="Como no cartão">
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label>Validade</label>
+          <input type="text" [(ngModel)]="dadosCartao.validade" name="validade" placeholder="MM/AA">
+        </div>
+        
+        <div class="form-group">
+          <label>CVC</label>
+          <input type="text" [(ngModel)]="dadosCartao.cvc" name="cvc" placeholder="123">
+        </div>
+      </div>
+      
+      <div class="resumo-pedido">
+        <h3>Resumo do Pedido</h3>
+        <ul class="lista-itens">
+          <li *ngFor="let item of cesta.itens">
+            {{item.nome}} - {{item.quant}} x {{item.preco | currency: 'BRL': 'symbol' : '1.2-2'}}
+          </li>
+        </ul>
+        
+        <div class="totais">
+          <p><strong>Subtotal:</strong> {{cesta.total | currency: 'BRL': 'symbol' : '1.2-2'}}</p>
+          <p><strong>Frete:</strong> {{valorFrete | currency: 'BRL': 'symbol' : '1.2-2'}}</p>
+          <p><strong>Total:</strong> {{cesta.total + valorFrete | currency: 'BRL': 'symbol' : '1.2-2'}}</p>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn-pagar">Confirmar Pagamento</button>
+    </form>
+  </div>
+  
+  <div *ngIf="pedidoProcessado" class="confirmacao-pedido">
+    <h2>Pagamento Realizado com Sucesso!</h2>
+    
+    <div class="detalhes-pedido">
+      <h3>Detalhes do Pedido</h3>
+      <p><strong>Número:</strong> {{dadosPedido.numeroPedido}}</p>
+      <p><strong>Data:</strong> {{dadosPedido.dataPedido}}</p>
+      <p><strong>Entrega:</strong> {{dadosPedido.dataEntrega}}</p>
+      
+      <h4>Itens</h4>
+      <ul class="lista-itens">
+        <li *ngFor="let item of dadosPedido.itens">
+          {{item.nome}} - {{item.quant}} x {{item.preco | currency: 'BRL': 'symbol' : '1.2-2'}}
+        </li>
+      </ul>
+      
+      <div class="totais">
+        <p><strong>Total:</strong> {{dadosPedido.total | currency: 'BRL': 'symbol' : '1.2-2'}}</p>
+      </div>
+    </div>
+    
+    <button (click)="voltarParaLoja()" class="btn-voltar">Voltar à Loja</button>
+  </div>
+</div>
