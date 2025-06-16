@@ -1,0 +1,29 @@
+<div class = "products">
+    <div class = "container">
+        <h1 class = "lg-title">Catálogo de Planetas - Explore os Mundos à Venda </h1>
+        <h2 class = "text-light">Pesquisa por: {{termoBusca}}</h2>
+        <p class = "sub-text">{{mensagem}}</p>
+        <div class = "product-items">
+            <div class = "product"  *ngFor="let item of lista" >
+                <div class = "product-content">
+                    <div class = "product-img">
+                        <img src = "{{item.img}}" alt = "product image">
+                    </div>
+                    <div class = "product-btns">
+                        <button type = "button" class = "btn-cart" (click)="comprar(item)"> Adicionar ao carrinho
+                            <span><i class = "fas fa-plus"></i></span>
+                        </button>
+                        <button type = "button" class = "btn-buy" (click)="carregar(item)"> Detalhes
+                            <span><i class = "fas fa-shopping-cart"></i></span>
+                        </button>
+                    </div>
+                    <div class="card-text">
+                        <p>{{item.descricao}}</p>
+                        <h1>{{item.nome}}</h1>
+                        <h3>{{ item.preco | currency:'BRL':'symbol':'1.2-2'}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

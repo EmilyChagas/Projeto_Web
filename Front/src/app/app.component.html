@@ -11,7 +11,7 @@
     </div>
     <ul class="nav navbar-nav navbar-right" [class.active]="isMenuOpen">
       <li class="search-box">
-        <input type="text" class="search" name="search"   placeholder="" [(ngModel)]="searchTerm"  [ngModelOptions]="{standalone: true}" (keydown.enter)="search()">
+        <input type="text" class="search" name="search"   placeholder="" [(ngModel)]="termoBusca"  [ngModelOptions]="{standalone: true}" (keydown.enter)="fazerBuscar()">
       </li>
       <li>
         <a href="" class="image-container">

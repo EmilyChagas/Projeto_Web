@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { GaleriaComponent } from './galeria/galeria.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
 
 export const routes: Routes = [
     {path:"",component:VitrineComponent},
@@ -13,5 +14,6 @@ export const routes: Routes = [
     {path: "Login", component:LoginComponent},
     {path: "Produtos", component:GaleriaComponent},
     {path:"Perfil", component:PerfilComponent},
-    {path:"Pagar", component:PagamentoComponent}
+    {path:"Pagar", component:PagamentoComponent},
+    {path:"Busca", component:PesquisaComponent}
 ];

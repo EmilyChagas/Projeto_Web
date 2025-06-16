@@ -30,10 +30,10 @@ public class Produto {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public String getDescritivo() {
+    public String getDescricao() {
         return descricao;
     }
-    public void setDescritivo(String descricao) {
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
     public double getPreco() {

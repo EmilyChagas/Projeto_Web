@@ -15,7 +15,7 @@ public interface ProdutoRepository
     @Query(value="select * from produto where destaque>0 order by destaque", nativeQuery = true)
     public List<Produto> listarVitrine();
 
-    @Query(value="select * from produto where nome like ?1 or descritivo like ?1", 
+    @Query(value="select * from produto where nome like ?1 or descricao like ?1", 
     nativeQuery = true)
     public List<Produto> fazerBusca(String termo);
 }

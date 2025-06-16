@@ -16,7 +16,12 @@ export class AppComponent {
   isSearchVisible = false;
   isMenuOpen = false;
   searchTerm: string = '';
+  public termoBusca : string = "";
 
+  fazerBuscar(){
+      localStorage.setItem("termoBusca", this.termoBusca);
+      location.href = "Busca";
+  }
   constructor(private router: Router) {}
 
   search() {
