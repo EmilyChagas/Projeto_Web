@@ -12,7 +12,7 @@ import com.web.sci_fi_worlds.app.entity.Produto;
 public interface ProdutoRepository 
     extends JpaRepository<Produto,Integer> {
 
-    @Query(value="select * from produto where destaque>0 order by destaque", nativeQuery = true)
+    @Query(value="SELECT * FROM produto WHERE destaque BETWEEN 5 AND 8 ORDER BY destaque", nativeQuery = true)
     public List<Produto> listarVitrine();
 
     @Query(value="select * from produto where nome like ?1 or descricao like ?1", 
