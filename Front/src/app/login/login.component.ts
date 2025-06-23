@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ClienteService } from '../service/cliente.service';
 import { isPlatformBrowser } from '@angular/common';
-
+import { EmailService } from '../service/email.service';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -14,7 +14,8 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  public constructor(private router: Router,private service: ClienteService, @Inject(PLATFORM_ID) private platformId: Object){
+  isLoading: boolean = false;
+  public constructor(private router: Router,private service: ClienteService, private emailService: EmailService, @Inject(PLATFORM_ID) private platformId: Object){
     if (isPlatformBrowser(this.platformId)) {
       const token = localStorage.getItem('authToken');
       let json = localStorage.getItem("cliente");
@@ -101,6 +102,28 @@ export class LoginComponent {
           this.mensagem = "Ocorreu um erro, tente mais tarde!";
         } 
     });
-}
+  }
+
+public solicitarRecuperacaoSenha() {
+  if (!this.obj.email) {
+    this.mensagem = "Por favor, informe seu e-mail";
+    return;
+  }
+
+  this.isLoading = true;
+  this.mensagem = "";
+
+  this.emailService.enviarEmailRecuperacao(this.obj.email).subscribe({
+    next: () => {
+      this.mensagem = "E-mail enviado com sucesso! Verifique sua caixa de entrada.";
+      this.isLoading = false;
+    },
+    error: (error) => {
+      this.mensagem = "Erro ao enviar e-mail. Tente novamente.";
+      this.isLoading = false;
+      console.error("Erro detalhado:", error);
+    }
+  });
 }
 
+}

@@ -132,6 +132,7 @@ form {
     text-align: center;
 }
 
+
 input {
     background-color: #eee;
     border-radius: 10px;
@@ -293,6 +294,18 @@ input {
 
 .social-container a:hover {
     border: 1px solid rgb(60, 7, 204);
+}
+
+.pass-link button {
+  all: unset; 
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  font: inherit;
+}
+
+.pass-link button:hover {
+  color: rgb(170, 29, 29);
 }
 
 @media screen and (min-width: 992px){

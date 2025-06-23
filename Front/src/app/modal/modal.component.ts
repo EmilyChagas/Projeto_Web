@@ -9,7 +9,6 @@ import { Cesta } from '../model/cesta';
   styleUrl: './modal.component.css'
 })
 export class ModalComponent {
-    // produtos: Produto[] = [];
     valorFrete: number = 2000;
   
     public mensagem: String = "";

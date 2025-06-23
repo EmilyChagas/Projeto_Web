@@ -30,7 +30,10 @@
             <label>Lembrar de mim</label>
           </div>
           <div class="pass-link">
-            <a href="#">Esqueceu a senha?</a>
+              <button (click)="solicitarRecuperacaoSenha()" [disabled]="isLoading">
+                <span *ngIf="!isLoading">Esqueceu a senha?</span>
+                <span *ngIf="isLoading">Enviando e-mail...</span>
+              </button>
           </div>
         </div>
         <button (click)="fazerLogin()">Login</button>

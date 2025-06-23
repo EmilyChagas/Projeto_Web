@@ -14,7 +14,7 @@ public class LojaService {
     public String enviarEmail(String to, String assunto, String corpo){
         try{
             SimpleMailMessage mensagem = new SimpleMailMessage();
-            mensagem.setFrom("Sci-FiWorlds@gmail.com");
+            mensagem.setFrom("scifiworlds6.1.6@gmail.com");
             mensagem.setTo(to);
             mensagem.setSubject(assunto);
             mensagem.setText(corpo);
